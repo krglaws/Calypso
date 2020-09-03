@@ -1,4 +1,9 @@
 {
   "token": "your_token_here",
+<<<<<<< HEAD
   "prefix": "!"
+=======
+  "prefix": "!",
+  "ownerId": "your_ID_here"
+>>>>>>> 028728022c891707ad751e5b149f6a6867816b9f
 }

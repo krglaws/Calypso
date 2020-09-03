@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.sqlite*
 *.png
 node_modules
@@ -5,3 +6,16 @@ config.json
 to-do.txt
 .directory
 lore.js
+=======
+# ignore
+*.sqlite*
+node_modules
+logs/*
+.vscode
+.directory
+config.json
+to-do.txt
+
+# do not ignore
+!.gitkeep
+>>>>>>> 028728022c891707ad751e5b149f6a6867816b9f

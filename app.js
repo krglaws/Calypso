@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const Discord = require('discord.js');
 const config = require('./config.json');
 const schedule = require('node-schedule');
@@ -25,3 +26,20 @@ function init() {
 }
 
 init();
+=======
+const config = require('./config.json');
+const Client = require('./src/Client.js');
+global.__basedir = __dirname;
+
+// setup
+const client = new Client(config);
+
+// initialize client
+function init() {
+  client.loadEvents('./src/events');
+  client.loadCommands('./src/commands');
+  client.login(client.token);
+}
+
+init();
+>>>>>>> 028728022c891707ad751e5b149f6a6867816b9f

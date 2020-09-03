@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const Database = require('better-sqlite3');
 const db = new Database(__basedir + '/data/db.sqlite');
 
@@ -21,5 +22,16 @@ module.exports = (client) => {
 
   console.log('Booted up successfully. Calypso is now online.');
   console.log(`Calypso is running on ${client.guilds.size} server(s).`);
+=======
+module.exports = (client) => {
+  // Update db with new servers
+  client.logger.info('Updating database...');
+  client.guilds.forEach(guild => {
+    client.db.guildSettings.insertRow.run(guild.id, guild.name, guild.systemChannelID);
+  });
+
+  client.logger.info('Calypso is now online');
+  client.logger.info(`Calypso is running on ${client.guilds.size} server(s)`);
+>>>>>>> 028728022c891707ad751e5b149f6a6867816b9f
   client.user.setPresence({ status: 'online', game: { name: 'your commands', type: 2 } });
 };
